@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EverI | Complete Tasks, Earn Rewards</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #0d1117;
+      color: #fff;
+      padding: 20px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1c1f24;
+      padding-left:130px;
+      padding-right: 130px;
+    }
+    .logo {
+      font-size: 50px;
+      font-weight: bold;
+      color: #57f287;
+    }
+
+    .container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-container .card {
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 20px;
+    width: 450px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.card-container .card:hover{
+    border: 0.5px solid rgb(4, 171, 40);
+    transition: 0.5s;
+    box-shadow: #57f287;
+}
+
+h3 {
+    margin: 10px 0;
+    font-weight: normal;
+    color: #848282;
+}
+
+.points, .multiplier {
+    font-size: 2em;
+    color: #FFD700;
+    margin-top: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;
+  margin-top: 30px;
+  gap: 30px; /* space between sections */
+}
+    .head{
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .left, .right {
+      width: 100%;
+      max-width: 1200px;
+    }
+    
+    .card {
+      background: #161b22;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #21262d;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+    .task:hover{
+        border: 0.5px solid rgb(4, 171, 40);
+    transition: 0.5s;
+    box-shadow: #57f287;
+    }
+    .task .label {
+      font-size: 1rem;
+    }
+    .task .points {
+      color: #57f287;
+      font-weight: 600;
+    }
+    .task button {
+      background: #57f287;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      padding: 6px 16px;
+      cursor: pointer;
+    }
+
+    .task button:hover{
+      border: 0.5px solid green;
+      background-color: #0d1117;
+      color: white;
+      transition: 0.5;
+    }
+    .task.locked button {
+      background: #555;
+      cursor: not-allowed;
+    }
+
+    a{
+      text-decoration: none;
+      color: black;
+    }
+
+    .container h2 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .container p {
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .days {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: 40px;
+    }
+
+    .day {
+      background-color: #1a1a1a;
+      width: 100px;
+      height: 120px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      color: white;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .day:hover {
+    border: 0.5px solid rgb(4, 171, 40);
+    transition: 0.5s;
+    box-shadow: #57f287;
+
+    }
+
+    .day img {
+      width: 40px;
+      margin-bottom: 10px;
+    }
+
+    .day span {
+      display: block;
+    }
+
+    .highlight {
+      background-color: #f2caff;
+      color: black;
+    }
+
+    .locked {
+      background-color: #3c3c3c;
+      color: #666;
+      padding: 10px 20px;
+      border-radius: 10px;
+      float: right;
+    }
+    .referral-container {
+    background-color: #242424;
+    border-radius: 10px;
+    padding: 20px;
+    width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.link-container {
+    display: flex;
+    align-items: center;
+}
+
+.referral-link {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin-right: 10px;
+    outline: none;
+}
+
+.copy-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+      border: 0.5px solid green;
+      background-color: #0d1117;
+      color: white;
+      transition: 0.5;
+    }
+
+
+.stats {
+    margin-top: 20px;
+}
+
+.stats p {
+    margin: 5px 0;
+}
+           /* Footer Section */
+           .footer {
+              background-color: #0d1117;
+              padding: 60px 20px 20px;
+              border-radius: 30px;
+            }
+        
+            .footer-container {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              max-width: 1200px;
+              margin: 0 auto;
+              gap: 30px;
+            }
+        
+            .footer-col {
+              flex: 1 1 200px;
+              min-width: 200px;
+            }
+        
+            .footer-col h4 {
+              font-size: 16px;
+              margin-bottom: 20px;
+              font-weight: 600;
+            }
+        
+            .footer-col ul {
+              list-style: none;
+              padding: 0;
+            }
+        
+            .footer-col ul li {
+              margin-bottom: 10px;
+            }
+        
+            .footer-col ul li a {
+              text-decoration: none;
+              color: #444;
+              font-size: 14px;
+            }
+        
+            .footer-col ul li a:hover {
+              color: #3b82f6;
+            }
+        
+            .footer-brand {
+              margin-bottom: 20px;
+            }
+        
+            .footer-brand h2 {
+              color: #3b82f6;
+              margin-bottom: 10px;
+            }
+        
+            .footer-brand p {
+              font-size: 14px;
+              color: #666;
+              line-height: 1.6;
+            }
+        
+            .social-icons {
+              margin-top: 15px;
+            }
+        
+            .social-icons a {
+              margin-right: 12px;
+              color: #444;
+              text-decoration: none;
+              font-size: 18px;
+            }
+        
+            .social-icons a:hover {
+              color: #3b82f6;
+              padding: 7px 7px;
+              border-radius: 5px;
+              border: 1px solid black;
+              transition: 1s;
+            }
+        
+            .footer-bottom {
+              text-align: center;
+              margin-top: 40px;
+              border-top: 1px solid #eaeaea;
+              padding-top: 20px;
+              font-size: 13px;
+              color: #666;
+            }
+        
+            .footer-bottom a {
+              margin: 0 10px;
+              color: #666;
+              text-decoration: none;
+            }
+        
+            .footer-bottom a:hover {
+              color: #3b82f6;
+            }
+        
+            @media (max-width: 768px) {
+              .footer-container {
+                flex-direction: column;
+              }
+            }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">EverI</div>
+    <div class="user">
+        <i class="ri-user-line" style="font-size:30px"></i>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1 class="head">Complete Tasks, Earn Rewards</h1>
+    <div class="card-container">
+        <div class="card">
+            <h3>TOTAL POINTS</h3>
+            <div class="points" id="totalPoints">0</div>
+        </div>
+        <div class="card">
+            <h3>MULTIPLIER</h3>
+            <div class="multiplier">1x</div>
+        </div>
+        <div class="card">
+            <h3>REFERRAL POINTS</h3>
+            <div class="points">-</div>
+        </div>
+    </div>
+</div>
+
+
+  <div class="dashboard">
+    <div class="left">
+      <div class="">
+        <h2 class="head">Tasks</h2>
+
+
+        <div id="notification" style="display:none; position:fixed; top:10px; right:10px; background:#4caf50; color:white; padding:10px; border-radius:5px;">
+          Claimed Successfully!
+        </div>
+        
+        <!-- Task Example -->
+        <div class="task" data-points="1000" data-url="https://x.com/titan_tokyo">
+          <div>
+            <div class="label">Follow @everiofficial on X</div>
+            <div class="points">+1000</div>
+          </div>
+          <button class="task-button">Follow</button>
+        </div>
+        
+
+        <div class="task" data-points="500" data-url="https://discord.com/invite/xyz">
+          <div>
+            <div class="label">Join our Discord</div>
+            <div class="points">+500</div>
+          </div>
+          <button class="task-button">Join</button>
+        </div>
+
+        <div class="task" data-points="1500" data-url="https://youtu.be/TZE9gVF1QbA?si=jULIcwK1K_Zw1qh1">
+          <div>
+            <div class="label">Watch our video</div>
+            <div class="points">+1500</div>
+          </div>
+          <button class="task-button">Watch</button>
+        </div>
+        
+        <div class="task" data-points="1500" data-url="https://x.com/Bitcoin">
+          <div>
+            <div class="label">Tweet about EverI</div>
+            <div class="points">+1500</div>
+          </div>
+          <button class="task-button">Tweet</button>
+        </div>
+        <div class="task">
+          <div>
+            <div class="label">Invite 3 friends to join</div>
+            <div class="points">+2000</div>
+          </div>
+          <button>Invite</button>
+        </div>
+        <div class="task">
+          <div>
+            <div class="label">Connect your wallet</div>
+            <div class="points">+500</div>
+          </div>
+          <button>Connect</button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="head">Check-in daily to earn points</h2>
+      <p>Check-in for 7 days to unlock maximum points.</p>
+    
+      <div class="days">
+        <div class="day" data-day="1" data-points="1000"><img src="https://img.icons8.com/emoji/48/coin-emoji.png"/><span>Day 1</span><span>+1,000</span></div>
+        <div class="day" data-day="2" data-points="500"><img src="https://img.icons8.com/emoji/48/coin-emoji.png"/><span>Day 2</span><span>+500</span></div>
+        <div class="day" data-day="3" data-points="250"><img src="https://img.icons8.com/emoji/48/coin-emoji.png"/><span>Day 3</span><span>+250</span></div>
+        <div class="day" data-day="4" data-points="250"><img src="https://img.icons8.com/emoji/48/coin-emoji.png"/><span>Day 4</span><span>+250</span></div>
+        <div class="day" data-day="5" data-points="750"><img src="https://img.icons8.com/emoji/48/coin-emoji.png"/><span>Day 5</span><span>+750</span></div>
+        <div class="day" data-day="6" data-points="750"><img src="https://img.icons8.com/emoji/48/coin-emoji.png"/><span>Day 6</span><span>+750</span></div>
+        <div class="day" data-day="7" data-points="2000"><img src="https://img.icons8.com/emoji/48/money-bag-emoji.png"/><span>Day 7</span><span>+2,000</span></div>
+      </div>
+    </div>
+    
+    <div class="referral-container">
+      <h1>Referral Program</h1>
+      <p>Invite friends and earn 20% of their points!</p>
+      <div class="link-container">
+        <input type="text" id="referralLink" class="referral-link" readonly>
+        <button class="copy-button" onclick="copyReferralLink()">Copy</button>
+      </div>
+      <div class="stats">
+        <p>Total Referrals: <span id="referralsCount">0</span></p>
+        <p>Earnings: <span id="earningsCount">0</span> points</p>
+      </div>
+    </div>
+    
+    <div id="notification" style="display:none; position:fixed; top:20px; right:20px; background:#4CAF50; color:white; padding:10px 20px; border-radius:5px; box-shadow:0 2px 10px rgba(0,0,0,0.2); z-index:999;">
+    </div>
+    
+
+   <!-- Footer section -->
+ <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col footer-brand">
+      <h2>Everl</h2>
+      <p>EverI is building a next-generation blockchain ecosystem focusing on scalability, security, and user experience..</p>
+      <div class="social-icons">
+        <a href="#" target="_blank"><i class="ri-twitter-x-line"></i></a>
+        <a href="#" target="_blank"><i class="ri-facebook-fill"></i></a>
+        <a href="#" target="_blank"><i class="ri-telegram-fill"></i></a>
+        <a href="#" target="_blank"><i class="ri-youtube-fill"></i></a>
+        <a href="#" target="_blank"><i class="ri-discord-fill"></i></a>
+        <a href="#" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+      </div>
+    </div>
+
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="whitepaper.html">Whitepaper</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="tokenomics.html">Tokenomics</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom"> 
+    <p>© 2025 Everl. All rights reserved. | 
+      <a href="privacy-policy.html" target="_blank">Privacy Policy</a> 
+      <a href="terms-of-service.html" target="_blank">Terms of Service</a> 
+      <a href="cookie-policy.html" target="_blank">Cookie Policy</a>
+    </p>
+  </div>
+  
+</footer>
+
+<script>
+  // Shared: Total Points & Notifications
+  const totalPointsElement = document.getElementById("totalPoints");
+  const notification = document.getElementById("notification");
+
+  let totalPoints = parseInt(localStorage.getItem("totalPoints")) || 0;
+  totalPointsElement.textContent = totalPoints;
+
+  function updateTotalPoints(points) {
+    totalPoints += points;
+    localStorage.setItem("totalPoints", totalPoints);
+    totalPointsElement.textContent = totalPoints;
+  }
+
+  function showNotification(message) {
+    notification.textContent = message;
+    notification.style.display = "block";
+    setTimeout(() => {
+      notification.style.display = "none";
+    }, 2000);
+  }
+
+  // ✅ REFERRAL SYSTEM
+  let referralCode = localStorage.getItem("referralCode");
+  if (!referralCode) {
+    referralCode = Math.random().toString(36).substring(2, 8);
+    localStorage.setItem("referralCode", referralCode);
+  }
+  const referralLink = `https://everi.io/ref/${referralCode}`;
+  const referralLinkInput = document.getElementById("referralLink");
+  if (referralLinkInput) referralLinkInput.value = referralLink;
+
+  function copyReferralLink() {
+    referralLinkInput.select();
+    document.execCommand("copy");
+    showNotification("Referral link copied!");
+  }
+
+  // Referral: Handle Join
+  const urlParams = new URLSearchParams(window.location.search);
+  const refFrom = urlParams.get("ref");
+  if (refFrom && !localStorage.getItem("refJoined")) {
+    updateTotalPoints(1000); // Invitee gets 1000 points
+    localStorage.setItem("refJoined", refFrom);
+    showNotification("🎉 You received 1000 points for using a referral link!");
+  }
+
+  // Referral Stats (frontend only)
+  let referrals = JSON.parse(localStorage.getItem("referrals")) || [];
+  let earnings = parseInt(localStorage.getItem("referralEarnings")) || 0;
+
+  function addReferral(pointsEarnedByFriend) {
+    referrals.push({ date: new Date().toISOString(), points: pointsEarnedByFriend });
+    const bonus = Math.floor(pointsEarnedByFriend * 0.2);
+    earnings += bonus;
+    updateTotalPoints(bonus);
+    saveReferralStats();
+  }
+
+  function saveReferralStats() {
+    localStorage.setItem("referrals", JSON.stringify(referrals));
+    localStorage.setItem("referralEarnings", earnings);
+    const referralsCount = document.getElementById("referralsCount");
+    const earningsCount = document.getElementById("earningsCount");
+    if (referralsCount) referralsCount.textContent = referrals.length;
+    if (earningsCount) earningsCount.textContent = earnings;
+  }
+
+  saveReferralStats();
+
+  // ✅ TASK SYSTEM
+  document.querySelectorAll(".task-button").forEach(button => {
+    button.addEventListener("click", function () {
+      const task = button.closest(".task");
+      const taskId = task.getAttribute("data-id");
+      const url = task.getAttribute("data-url");
+      const points = parseInt(task.getAttribute("data-points"));
+
+      if (localStorage.getItem(`claimed_${taskId}`)) {
+        button.textContent = "Claimed";
+        button.disabled = true;
+        button.style.backgroundColor = "#aaa";
+        return;
+      }
+
+      if (["Follow", "Join", "Watch", "Tweet"].includes(button.textContent)) {
+        window.open(url, "_blank");
+        button.textContent = "Claim";
+      } else if (button.textContent === "Claim") {
+        updateTotalPoints(points);
+        localStorage.setItem(`claimed_${taskId}`, true);
+
+        button.textContent = "Claimed";
+        button.disabled = true;
+        button.style.backgroundColor = "#aaa";
+        button.style.cursor = "default";
+        showNotification("✅ Claimed Successfully!");
+      }
+    });
+  });
+
+  // ✅ DAILY CHECK-IN SYSTEM
+  const days = document.querySelectorAll(".day");
+  const today = new Date();
+  const todayDate = today.toISOString().split('T')[0];
+
+  let checkinData = JSON.parse(localStorage.getItem("checkinData")) || {
+    lastCheckin: null,
+    currentDay: 1
+  };
+
+  function saveCheckinData() {
+    localStorage.setItem("checkinData", JSON.stringify(checkinData));
+  }
+
+  days.forEach(dayEl => {
+    const dayNum = parseInt(dayEl.getAttribute("data-day"));
+    const points = parseInt(dayEl.getAttribute("data-points"));
+
+    if (dayNum === checkinData.currentDay) {
+      dayEl.classList.add("clickable");
+      dayEl.style.cursor = "pointer";
+
+      dayEl.addEventListener("click", () => {
+        if (checkinData.lastCheckin === todayDate) {
+          showNotification("⚠️ Already checked in today!");
+          return;
+        }
+
+        updateTotalPoints(points);
+        checkinData.lastCheckin = todayDate;
+        checkinData.currentDay = Math.min(checkinData.currentDay + 1, 7);
+        dayEl.style.opacity = "0.5";
+        dayEl.style.pointerEvents = "none";
+
+        saveCheckinData();
+        showNotification("✅ Check-in Successful!");
+      });
+    } else if (dayNum < checkinData.currentDay) {
+      dayEl.style.opacity = "0.5";
+    } else {
+      dayEl.style.opacity = "0.3";
+    }
+  });
+</script>
+
+
+
+
+
+</body>
+</html>

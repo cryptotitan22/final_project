@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EverI Community</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+    }
+
+    header .logo {
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    nav ul li a.active {
+      border-bottom: 2px solid #00bfae;
+    }
+
+    .community-content {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .community-content h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .channels {
+      display: flex;
+      justify-content: space-around;
+      margin: 40px 0;
+    }
+
+    .channel {
+      text-align: center;
+    }
+
+    .channel h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #00bfae;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .signup-form {
+      margin-top: 40px;
+    }
+
+    .signup-form h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .signup-form p {
+      margin-bottom: 20px;
+    }
+
+    .signup-form input {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .signup-form button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #00bfae;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer {
+              background-color: #ffffff;
+              padding: 60px 20px 20px;
+              border-radius: 30px;
+            }
+        
+            .footer-container {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              max-width: 1200px;
+              margin: 0 auto;
+              gap: 30px;
+            }
+        
+            .footer-col {
+              flex: 1 1 200px;
+              min-width: 200px;
+            }
+        
+            .footer-col h4 {
+              font-size: 16px;
+              margin-bottom: 20px;
+              font-weight: 600;
+            }
+        
+            .footer-col ul {
+              list-style: none;
+              padding: 0;
+            }
+        
+            .footer-col ul li {
+              margin-bottom: 10px;
+            }
+        
+            .footer-col ul li a {
+              text-decoration: none;
+              color: #444;
+              font-size: 14px;
+            }
+        
+            .footer-col ul li a:hover {
+              color: #3b82f6;
+            }
+        
+            .footer-brand {
+              margin-bottom: 20px;
+            }
+        
+            .footer-brand h2 {
+              color: #3b82f6;
+              margin-bottom: 10px;
+            }
+        
+            .footer-brand p {
+              font-size: 14px;
+              color: #666;
+              line-height: 1.6;
+            }
+        
+            .social-icons {
+              margin-top: 15px;
+            }
+        
+            .social-icons a {
+              margin-right: 12px;
+              color: #444;
+              text-decoration: none;
+              font-size: 18px;
+            }
+        
+            .social-icons a:hover {
+              color: #3b82f6;
+              padding: 7px 7px;
+              border-radius: 5px;
+              border: 1px solid black;
+              transition: 1s;
+            }
+        
+            .footer-bottom {
+              text-align: center;
+              margin-top: 40px;
+              border-top: 1px solid #eaeaea;
+              padding-top: 20px;
+              font-size: 13px;
+              color: #666;
+            }
+        
+            .footer-bottom a {
+              margin: 0 10px;
+              color: #666;
+              text-decoration: none;
+            }
+        
+            .footer-bottom a:hover {
+              color: #3b82f6;
+            }
+        
+            @media (max-width: 768px) {
+              .footer-container {
+                flex-direction: column;
+              }
+            }
+            header {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <h1>EverI</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="tokenomics.html">Tokenomics</a></li>
+        <li><a href="community.html">Community</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Section -->
+  <section class="community-content">
+    <h2>Join the EverI Community</h2>
+    <p>Connect with like-minded individuals, share ideas, and stay up to date with the latest news in the EverI ecosystem. Our community is designed to help you grow and stay informed.</p>
+    
+    <!-- Community Channels -->
+    <div class="channels">
+      <div class="channel">
+        <h3>Forum</h3>
+        <p>Discuss all things EverI with fellow enthusiasts in our community forum.</p>
+        <a href="#" class="btn">Visit Forum</a>
+      </div>
+      <div class="channel">
+        <h3>Telegram</h3>
+        <p>Join our Telegram group for real-time conversations and updates.</p>
+        <a href="#" class="btn">Join Telegram</a>
+      </div>
+      <div class="channel">
+        <h3>Discord</h3>
+        <p>Participate in our Discord server to chat, collaborate, and learn more.</p>
+        <a href="#" class="btn">Join Discord</a>
+      </div>
+    </div>
+
+    <!-- Sign Up Form Section -->
+    <div class="signup-form">
+      <h3>Sign up for Updates</h3>
+      <p>Get the latest community news, events, and updates delivered straight to your inbox.</p>
+      <form id="signup-form">
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+      <div id="message"></div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col footer-brand">
+        <h2>EverI</h2>
+        <p>EverI is building a next-generation blockchain ecosystem focusing on scalability, security, and user experience.</p>
+        <div class="social-icons">
+          <a href="#" target="_blank"><i class="ri-twitter-x-line"></i></a>
+          <a href="#" target="_blank"><i class="ri-facebook-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-telegram-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-youtube-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-discord-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="whitepaper.html">Whitepaper</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="tokenomics.html">Tokenomics</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom"> 
+      <p>© 2025 EverI. All rights reserved. | 
+        <a href="privacy-policy.html" target="_blank">Privacy Policy</a> 
+        <a href="terms-of-service.html" target="_blank">Terms of Service</a> 
+        <a href="cookie-policy.html" target="_blank">Cookie Policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript to handle form submission
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent the form from refreshing the page
+      const email = document.getElementById('email').value;
+      
+      // Validate email
+      if (email) {
+        document.getElementById('message').innerHTML = `<p>Thank you for signing up, ${email}!</p>`;
+        document.getElementById('email').value = ''; // Clear the input field
+      } else {
+        document.getElementById('message').innerHTML = `<p>Please enter a valid email address.</p>`;
+      }
+    });
+  </script>
+</body>
+</html>

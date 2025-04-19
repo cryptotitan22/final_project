@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Careers at Everi</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    .team {
+      background: #1e1e2f;
+      color: #fff;
+      padding: 20px 20px;
+      text-align: center;
+    }
+    .team h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    /* Sections */
+    .intro, .job-listings, .application {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .intro h2, .job-listings h2, .application h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #1e1e2f;
+    }
+
+    /* Job Cards */
+    .job {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+      margin-bottom: 25px;
+    }
+    .job h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .job p {
+      margin-bottom: 10px;
+    }
+    .apply-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #0077cc;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    .apply-btn:hover {
+      background: #005fa3;
+    }
+
+    /* Form */
+    .apply-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .apply-form input, .apply-form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    .apply-form button {
+      padding: 12px;
+      font-size: 16px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .apply-form button:hover {
+      background: #218838;
+    }
+
+    /* Enhanced Footer */
+    .footer {
+      background: #1e1e2f;
+      color: #fff;
+      padding: 60px 20px 30px;
+    }
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 0 auto;
+      gap: 30px;
+      justify-content: space-between;
+    }
+    .footer-col {
+      flex: 1 1 250px;
+    }
+    .footer h2, .footer h4 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    .footer p, .footer ul li a {
+      color: #ccc;
+      font-size: 14px;
+    }
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+    .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 20px;
+      color: #fff;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #1da1f2;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: #bbb;
+    }
+    .footer-bottom a {
+      margin-left: 10px;
+      color: #aaa;
+    }
+    .footer-bottom a:hover {
+      color: #fff;
+    }
+    header {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>EverI</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="tokenomics.html">Tokenomics</a></li>
+        <li><a href="community.html">Community</a></li>
+      </ul>
+    </nav>
+  </header>
+  <header class="team">
+    <h1>Join the Everi Team</h1>
+  </header>
+
+  <section class="intro">
+    <h2>Why Work With Us?</h2>
+    <p>At Everi, we value creativity, innovation, and a passion for excellence. We provide a vibrant work culture, great benefits, and opportunities to grow professionally.</p>
+  </section>
+
+  <section class="job-listings">
+    <h2>Open Positions</h2>
+
+    <div class="job">
+      <h3>Frontend Developer</h3>
+      <p><strong>Location:</strong> Remote | <strong>Type:</strong> Full-time</p>
+      <p>We’re looking for a frontend developer with experience in React.js and Tailwind CSS. You’ll be building UI components for our next-gen platform.</p>
+      <a href="#apply" class="apply-btn">Apply Now</a>
+    </div>
+
+    <div class="job">
+      <h3>Backend Developer</h3>
+      <p><strong>Location:</strong> New York, USA | <strong>Type:</strong> Full-time</p>
+      <p>Join our team to build secure and scalable backend APIs using Node.js and PostgreSQL. Experience with cloud services is a plus.</p>
+      <a href="#apply" class="apply-btn">Apply Now</a>
+    </div>
+
+    <div class="job">
+      <h3>UI/UX Designer</h3>
+      <p><strong>Location:</strong> Remote | <strong>Type:</strong> Part-time</p>
+      <p>Design sleek, user-friendly interfaces and ensure consistent visual language across our web and mobile products.</p>
+      <a href="#apply" class="apply-btn">Apply Now</a>
+    </div>
+  </section>
+
+  <section class="application" id="apply">
+    <h2>Submit Your Application</h2>
+    <form action="#" method="POST" class="apply-form">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Position You're Applying For" required>
+      <textarea rows="6" placeholder="Why do you want to work with us?" required></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+
+  <!-- Enhanced Footer section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col footer-brand">
+        <h2>Everl</h2>
+        <p>EverI is building a next-generation blockchain ecosystem focusing on scalability, security, and user experience..</p>
+        <div class="social-icons">
+          <a href="#" target="_blank"><i class="ri-twitter-x-line"></i></a>
+          <a href="#" target="_blank"><i class="ri-facebook-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-telegram-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-youtube-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-discord-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="whitepaper.html">Whitepaper</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="tokenomics.html">Tokenomics</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom"> 
+      <p>© 2025 Everl. All rights reserved. | 
+        <a href="privacy-policy.html" target="_blank">Privacy Policy</a> 
+        <a href="terms-of-service.html" target="_blank">Terms of Service</a> 
+        <a href="cookie-policy.html" target="_blank">Cookie Policy</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

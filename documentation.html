@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Documentation</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .table-of-contents {
+      background: #f7f7f7;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    .table-of-contents h2 {
+      color: #333;
+    }
+
+    .table-of-contents ul {
+      padding-left: 20px;
+    }
+
+    .table-of-contents li {
+      margin-bottom: 8px;
+    }
+
+    .table-of-contents a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .table-of-contents a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      color: #007bff;
+      font-size: 24px;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    section h3 {
+      color: #333;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    section p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    pre {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-size: 16px;
+      color: #e53e3e;
+    }
+
+    footer {
+      background-color: #1c1c1e;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      position: relative;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .footer-col {
+      width: 30%;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .footer-col ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .footer-col ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-brand h2 {
+      color: #fff;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    .footer-bottom a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Project Documentation</h1>
+  </header>
+
+  <div class="container">
+    <div class="table-of-contents">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#api">API Documentation</a></li>
+        <li><a href="#contribution">Contribution</a></li>
+        <li><a href="#license">License</a></li>
+      </ul>
+    </div>
+
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>Welcome to the official documentation of our project. This documentation provides detailed instructions on how to install, use, and contribute to the project.</p>
+      <p>Our project aims to solve XYZ problem and is built with technologies like React, Node.js, and MongoDB. The project is designed to be scalable, secure, and easy to use.</p>
+    </section>
+
+    <section id="installation">
+      <h2>Installation</h2>
+      <p>Follow the steps below to install the project on your local machine:</p>
+      <ol>
+        <li>Clone the repository: 
+          <pre><code>git clone https://github.com/username/repository.git</code></pre>
+        </li>
+        <li>Navigate to the project folder: 
+          <pre><code>cd repository</code></pre>
+        </li>
+        <li>Install dependencies: 
+          <pre><code>npm install</code></pre>
+        </li>
+        <li>Start the development server: 
+          <pre><code>npm start</code></pre>
+        </li>
+      </ol>
+    </section>
+
+    <section id="usage">
+      <h2>Usage</h2>
+      <p>Once the installation is complete, you can start using the project. Here's a simple guide on how to use the project:</p>
+      <ul>
+        <li>Open your browser and go to <code>http://localhost:3000</code>.</li>
+        <li>Log in with your credentials or register for a new account.</li>
+        <li>Explore the features available on the dashboard.</li>
+      </ul>
+    </section>
+
+    <section id="features">
+      <h2>Features</h2>
+      <h3>Feature 1: User Authentication</h3>
+      <p>This feature allows users to sign up, log in, and manage their profiles securely using JWT authentication.</p>
+
+      <h3>Feature 2: Real-time Notifications</h3>
+      <p>The system provides real-time notifications to users when there are updates on their tasks.</p>
+
+      <h3>Feature 3: Data Analytics</h3>
+      <p>Our application includes powerful data analytics features that allow users to visualize their data in interactive charts.</p>
+    </section>
+
+    <section id="api">
+      <h2>API Documentation</h2>
+      <p>Our API is built using REST principles and can be accessed through HTTP requests. Below are the most commonly used endpoints:</p>
+      <h3>GET /api/users</h3>
+      <p>Retrieves a list of all users.</p>
+      <pre><code>curl -X GET http://localhost:3000/api/users</code></pre>
+
+      <h3>POST /api/login</h3>
+      <p>Logs a user in by providing email and password.</p>
+      <pre><code>curl -X POST -d '{"email": "user@example.com", "password": "password123"}' http://localhost:3000/api/login</code></pre>
+    </section>
+
+    <section id="contribution">
+      <h2>Contribution</h2>
+      <p>If you would like to contribute to the project, follow these steps:</p>
+      <ol>
+        <li>Fork the repository.</li>
+        <li>Clone your forked repository: 
+          <pre><code>git clone https://github.com/titan_tokyo/repository.git</code></pre>
+        </li>
+        <li>Create a new branch: 
+          <pre><code>git checkout -b feature-branch</code></pre>
+        </li>
+        <li>Make your changes and commit them.</li>
+        <li>Push the changes to your fork: 
+          <pre><code>git push origin feature-branch</code></pre>
+        </li>
+        <li>Submit a pull request.</li>
+      </ol>
+    </section>
+
+    <section id="license">
+      <h2>License</h2>
+      <p>This project is licensed under the MIT License - see the <a href="LICENSE" target="_blank">LICENSE</a> file for details.</p>
+    </section>
+  </div>
+
+  <!-- Footer section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col footer-brand">
+        <h2>Everl</h2>
+        <p>EverI is building a next-generation blockchain ecosystem focusing on scalability, security, and user experience..</p>
+        <div class="social-icons">
+          <a href="#" target="_blank"><i class="ri-twitter-x-line"></i></a>
+          <a href="#" target="_blank"><i class="ri-facebook-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-telegram-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-youtube-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-discord-fill"></i></a>
+          <a href="#" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Whitepaper</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Tokenomics</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom"> 
+      <p>© 2025 Everl. All rights reserved. | 
+        <a href="privacy-policy.html" target="_blank">Privacy Policy</a> 
+        <a href="terms-of-service.html" target="_blank">Terms of Service</a> 
+        <a href="cookie-policy.html" target="_blank">Cookie Policy</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
